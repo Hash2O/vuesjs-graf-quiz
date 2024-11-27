@@ -30,7 +30,7 @@ const hasAnswered = computed(() => answer.value !== null)
 </script>
 
 <style>
-    .cquestion {
+    .question {
         padding-top: 2rem;
     }
     .question button {
