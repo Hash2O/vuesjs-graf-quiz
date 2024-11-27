@@ -22,12 +22,22 @@ const props = defineProps({
 })
 const model = defineModel()
 const classes = computed(() => ({
-    right: props.disabled && props.value === props.correctAnswer
+    // disabled: props.disabled,
+    right: props.disabled && props.value === props.correctAnswer,
+    wrong: props.disabled && props.value !== props.correctAnswer && model.value === props.value
 }))
 </script>
 
 <style>
 .right {
-    color: lightgreen;
+    color: rgb(27, 161, 27);
+    opacity: 1;
+}
+.wrong {
+    color: red;
+    opacity: 1;
+}
+.disabled {
+    opacity: .33;
 }
 </style>
