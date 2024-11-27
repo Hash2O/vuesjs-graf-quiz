@@ -13,7 +13,7 @@
         :answers="answers"
         :quiz="quiz" 
         />
-    {{ answers }}
+    <!-- {{ answers }} -->
 </template>
 
 <script setup>
