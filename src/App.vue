@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div v-if="state === 'error'">
-    <p>
-      Impossible de charger le quiz.
-    </p>
-  </div>
-  <div :aria-busy="state === 'loading'">
-    <Quiz :quiz="quiz" v-if="quiz" />
-  </div>
+      <p>
+        Impossible de charger le quiz.
+      </p>
+    </div>
+    <div :aria-busy="state === 'loading'">
+      <Quiz :quiz="quiz" v-if="quiz" />
+    </div>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ onMounted(() => {
       if(result.ok) {
         return result.json()
       }
-      throw new Error("Impossible de récupérer le fichier json")
+      throw new Error("Impossible de récupérer le fichier json.")
     })
     .then(data => {
       quiz.value = data
